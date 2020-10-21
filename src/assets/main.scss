@@ -1,0 +1,149 @@
+@import "_variables.scss";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~bootstrap";
+
+body {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+    background: #000;
+    margin: 0;
+}
+
+a {
+    transition: 0.2s;
+    color: $led-color;
+
+    &:hover {
+        transition: 0.2s;
+        color: darken($led-color, 10%);
+    }
+}
+
+a.hamburger {
+    &.visible {
+        color: #aaa;
+    }
+
+    &:hover {
+        color: #fff;
+    }
+
+    &:hover, &.visible {
+        transition: 0.1s;
+        opacity: 100%;
+    }
+
+    font-size: 1.5em;
+    transition: 0.2s;
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    padding: 1em 1.5em;
+    z-index: 999;
+}
+
+#menu {
+    &.hidden {
+        transition: 0.2s;
+        top: 2.5em;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    transition: 0.2s;
+    position: absolute;
+    right: 1.5em;
+    top: 5em;
+    background: #151515;
+    max-width: 100%;
+    padding: 1em;
+    border-radius: 0.5em;
+
+    .form-group {
+        label {
+            font-weight: 600;
+            .shortcut {
+                color: #666;
+                margin-left: 0.2em;
+            }
+        }
+    }
+}
+
+#clock {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    margin-left: -45vh;
+    height: 90vh;
+    width: 90vh;
+    border-radius: 45vh;
+}
+
+.second-led {
+    // height: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    margin-left: -0.75vh;
+    transform-origin: 50% 45vh;
+}
+
+.hour-led {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 2.5vh;
+    margin-left: -0.75vh;
+    transform-origin: 50% 42.5vh;
+}
+
+.led {
+    background: #111;
+    width: 1.5vh;
+    height: 1.5vh;
+    border-radius: 0.75vh;
+}
+
+.led.on {
+    background: $led-color;
+    transition: 30ms;
+}
+
+.glow {
+    .led.on {
+        //transition: 10ms;
+        background: lighten($led-color, 30%);
+        -webkit-box-shadow: 0 0 3vh 0.1vh $led-color, inset 0 0 .4vh 0.5vh $led-color;
+        -moz-box-shadow: 0 0 3vh 0.1vh $led-color, inset 0 0 .4vh 0.5vh $led-color;
+        box-shadow: 0 0 3vh 0.1vh $led-color, inset 0 0 0.3vh 0.6vh $led-color;
+        filter: blur(0.5px);
+    }
+}
+
+#logo {
+    transition: 0.2s;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 10%;
+
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    img {
+        width: 9vh;
+    }
+
+    a {
+        opacity: 20% !important;
+        &:hover { opacity: 70% !important; }
+    }
+}
