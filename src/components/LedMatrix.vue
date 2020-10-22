@@ -100,7 +100,7 @@ export default {
       left: 20%;
       text-align: center;
       font-size: 0.25em;
-      filter: blur(0.5px);
+      //filter: blur(0.5px);
     }
 
     #separator {
@@ -122,7 +122,7 @@ export default {
       transition: 250ms;
       color: lighten($led-color, 5%);
       text-shadow: 0 0 3vh darken($led-color, 10%), 0 0 20vh $led-color;
-      filter: blur(0.5px);
+      //filter: blur(0.5px);
     }
   }
 </style>

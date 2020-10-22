@@ -1,5 +1,4 @@
 @import "_variables.scss";
-@import "~@fortawesome/fontawesome-free/css/all.css";
 @import "~bootstrap";
 
 body {
@@ -117,12 +116,12 @@ a.hamburger {
 
 .glow {
     .led.on {
-        //transition: 10ms;
         background: lighten($led-color, 30%);
         -webkit-box-shadow: 0 0 3vh 0.1vh $led-color, inset 0 0 .4vh 0.5vh $led-color;
         -moz-box-shadow: 0 0 3vh 0.1vh $led-color, inset 0 0 .4vh 0.5vh $led-color;
         box-shadow: 0 0 3vh 0.1vh $led-color, inset 0 0 0.3vh 0.6vh $led-color;
-        filter: blur(0.5px);
+        //filter: blur(0.5px);
+        //transition: 10ms;
     }
 }
 

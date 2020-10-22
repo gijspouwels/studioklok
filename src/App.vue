@@ -11,11 +11,11 @@
       </div>
       <div id="logo" v-bind:class="{'hidden': logoHidden}" v-shortkey="['ctrl', 'x']" @shortkey="hideLogo">
         <a href="http://zender.io" target="_blank">
-          <img src="./assets/img/zender-wit.svg" alt="Zender.io">
+          <img src="@/assets/img/zender-wit.svg" alt="Zender.io">
         </a>
       </div>
     </div>
-    <a class="hamburger" href="#" v-bind:class="{'visible': menuVisible}" v-on:click="toggleMenu" v-shortkey="['m']" @shortkey="toggleMenu"><i class="fa fa-bars"></i></a>
+    <a class="hamburger" href="#" v-bind:class="{'visible': menuVisible}" v-on:click="toggleMenu" v-shortkey="['m']" @shortkey="toggleMenu"><font-awesome-icon icon="bars" /></a>
     <div id="menu" v-bind:class="{'hidden': !menuVisible}">
       <div class="form-group">
         <label class="d-block">FPS <span class="shortcut">ctrl + alt + [1&ndash;{{availableFps.length}}]</span></label>
