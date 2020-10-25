@@ -88,7 +88,7 @@ const defaultSettings = {
   fps: 25,
   dropFrame: false,
   style: 'lcd',
-  cursorHidden: false,
+  cursorHidden: true,
   ledGlow: true,
   frameBrightness: 0,
 }
