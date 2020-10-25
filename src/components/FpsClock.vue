@@ -14,21 +14,16 @@ export default {
       return this.$parent.settings.frameBrightness;
     },
     time() {
-      let hours = this.addLeadingZero(this.$parent.timecode.hours);
-      let minutes = this.addLeadingZero(this.$parent.timecode.minutes);
-      let seconds = this.addLeadingZero(this.$parent.timecode.seconds);
+      let hours = this.$parent.addLeadingZero(this.$parent.timecode.hours);
+      let minutes = this.$parent.addLeadingZero(this.$parent.timecode.minutes);
+      let seconds = this.$parent.addLeadingZero(this.$parent.timecode.seconds);
       return `${hours}:${minutes}:${seconds}`;
     },
     frame() {
-      return this.addLeadingZero(this.$parent.timecode.frames);
+      return this.$parent.addLeadingZero(this.$parent.timecode.frames);
     }
   },
   methods: {
-    addLeadingZero(num, size = 2) {
-      num = num.toString();
-      while (num.length < size) num = "0" + num;
-      return num;
-    }
   }
 }
 </script>
@@ -42,7 +37,7 @@ export default {
     top: 50%;
     font-size: 12vh;
     font-weight: 500;
-    margin-top: -0.6em;
+    margin-top: -0.7em;
     color: $led-color;
     text-align: center;
   }
